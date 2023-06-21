@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 
 Semantic classification of tabular data is a crucial task in the field of Natural Language Processing (NLP) and has numerous applications such as entity recognition, and document classification. In recent years, deep learning models have been widely used for this task due to their ability to learn complex representations of data.  In recent years, deep learning models have emerged as a powerful tool for semantic classification. One of the most widely used deep learning models is the Convolutional Neural Network (CNN). CNNs are neural networks that are capable of learning local patterns in data through convolutional operations. 
 
@@ -6,7 +6,7 @@ Deep learning methods have been shown to outperform conventional methods for sem
 
 We then divide the processed dataset into two parts, training and testing data, and feed the training data into a semantic model consisting of a CharCNN, Bi-LSTM, and CNN + Bi-LSTM model. The process involves testing generated content through various defined features and passing it to the Semantic Tagging interface that performs Concept Weighing on predicted output. We use the confidence scores for Semantic Error Analysis and further employ a Reinforcement Learning Model as a feedback system to ensure that the semantics have been correctly classified. In cases where the model has incorrectly classified the semantic tag , the RL model gives feedback to the model, which can be corrected, updated, and output the correct semantic.
 
-#System Requirements
+# System Requirements
 
 To effectively execute the following code, the first crucial requirement is to have Python installed, which can be obtained from the official Python website. Follow the specific installation instructions according to your operating system. Furthermore, Python packages such as Tensorflow, NumPy, Pandas, and SciPy are utilized to execute various components of the model.
 
@@ -14,7 +14,7 @@ Ensure that you have installed NumPy, a numerical computing library, to perform 
 
 This code snippet imports a range of essential libraries and modules required for constructing and training a deep learning model for text classification. It encompasses NumPy for efficient numerical computing, matplotlib for effective visualizations, and Keras for its high-level neural networks API. Additionally, the code imports various layer types from Keras, such as Dense, Dropout, Embedding, LSTM, MaxPooling1D, GlobalMaxPooling1D, and Bidirectional, which are commonly employed in text classification models. Lastly, the scikit-learn library's functions are imported to compute class weights for imbalanced classification scenarios. Overall, this code snippet establishes the necessary components to construct and train a deep learning model for text classification using Keras.
 
-#Usage Instructions
+# Usage Instructions
 
 The code can be executed either on Google Colab by connecting to a GPU-enabled runtime or on a local system. To run the code, upload the dataset in CSV format to the files section. The dataset undergoes multiple imputations in order to fill in missing and invalid data, which is carried out in the Imputation file.
 
@@ -24,7 +24,7 @@ The processed dataset is further used to create key-value pairs for all columns,
 
 The JSON file is linked to the models for training. The time required for training may vary based on the model, as the program includes code to install necessary packages. The file automatically generates predictions from the model, including the predicted column and the actual column. The script also includes a code snippet for manual entry of values, with the model predicting the semantic tag and its confidence score for the provided value. Finally, the results are logged to the output console. Further explanation of the output can be found in the next section.
 
-#Output and Interpretation
+# Output and Interpretation
 
 The study used a customer entry tabular dataset, which likely includes multiple columns, such as age, gender, zip code, email, etc. The study uses three different deep learning models to classify the data in the customer entry dataset. The three models used were Char-CNN, Bi-LSTM, and custom CNN+Bi-LSTM model. Char-CNN is used to extract features from character-level data, Bi-LSTM for the temporal dependencies in the data and the custom CNN+Bi-LSTM model to utilize the strengths of both models to improve classification accuracy. The study evaluated the performance of these three models in terms of accuracy. 
 
